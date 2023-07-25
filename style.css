@@ -22,6 +22,12 @@
     }
 
 
+    .banner-forums-edit{
+      background:url("./images/bg.png");
+      background-size:contain;
+    }
+
+
 .cards{
     .card{
         background:linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('./images/trending.png');
@@ -123,6 +129,7 @@
 }
 [thumbsslider] .swiper-slide.swiper-slide{
   opacity:1;
+  padding:0 20px !important;
 }
 @media(min-width:22768px){
   .cards{

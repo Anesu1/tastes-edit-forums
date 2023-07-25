@@ -224,32 +224,49 @@
             listOfImages.appendChild(item);
         }
 
+        let colors = [
+            "97011C",
+            "FF7913",
+            "E3C1A6",
+            "DB368E",
+            "F1C902",
+            "DA0101",
+            "F0C800",
+            "5B9935",
+            "652601",
+            "B2B2B2",
+            "4349FF",
+            "AD6A10",
+            "908C02",
+            "97011C",
+        ]
+
         for (let i = 0; i < itemCount; i++) {
             const angle = (360 / itemCount) * i;
             const x = radius * Math.cos(angle * (Math.PI / 180));
             const y = radius * Math.sin(angle * (Math.PI / 180));
 
             const item = document.createElement("div");
-            item.className = "swiper-slide w-14 h-14 bg-black flex flex-col items-center justify-center cursor-pointer";
+            item.className = "swiper-slide w-14 h-14 flex flex-col items-center justify-center cursor-pointer p-2";
             item.style.position = "absolute";
             item.style.height = "50px";
             item.style.width = "50px";
-            item.style.backgroundColor = "#000";
+            item.style.backgroundColor =`#${colors[i]}`;
             item.style.left = `calc(50% + ${x}px)`;
             item.style.top = `calc(50% + ${y}px)`;
             item.style.transform = "translate(-50%, -50%)";
 
             const title = document.createElement("h5");
-            title.className = "text-white mt-[5px] font-bold text-[15px]";
+            title.className = "text-white mt-[5px] font-bold text-[10px] w-max";
             title.innerText = `Item ${i + 1}`;
 
             const image = document.createElement("img");
-            image.className = "w-[80%]"
+            image.className = "w-full"
             image.src = `./images/cup${i + 1}.png`;
             image.alt = `Item ${i + 1}`;
 
             const inner = document.createElement("div");
-            inner.className = "bg-red w-[20px] flex flex-col"
+            inner.className = "bg-red flex flex-col"
             inner.appendChild(image);
             inner.appendChild(title);
 
@@ -258,8 +275,8 @@
             thumbsList.appendChild(item);
         }
         var swiper = new Swiper(".mySwiper", {
-            spaceBetween: 10,
-            slidesPerView: 4,
+            spaceBetween: 2,
+            slidesPerView: 10,
             freeMode: true,
             watchSlidesProgress: true,
             

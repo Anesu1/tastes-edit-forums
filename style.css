@@ -122,7 +122,7 @@
     object-fit:contain;
 }
 [thumbsslider] .swiper-slide.swiper-slide{
-  
+  opacity:1;
 }
 @media(min-width:22768px){
   .cards{

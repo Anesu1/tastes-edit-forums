@@ -133,6 +133,21 @@
   opacity:1;
   padding:0 20px !important;
 }
+[thumbsslider] .swiper-slide{
+  height:50px !important;
+  width:50px !important;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+[thumbsslider] .swiper-slide img{
+  width:50% !important;
+  display:block;
+  margin:0 auto;
+}
+.mySwiper2 .swiper-wrapper{
+  max-width:300px !important;
+}
 @media(min-width:22768px){
   .cards{
     display:flex;
@@ -142,4 +157,11 @@
       width:20%;
     }
   }
+}
+
+.leaves-bg{
+  width:200px !important;
+  transform: translateY(75%) scale(2.6);
+  opacity:0.4;
+  background:linear-gradient(to right, #5C9936, #5C9936, transparent, transparent);
 }

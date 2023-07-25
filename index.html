@@ -210,7 +210,32 @@
         const thumbsList = document.querySelector(".thumbs-list");
         const listOfImages = document.querySelector(".images-list");
         const itemCount = 14;
-        const radius = 150;
+        var radius;
+
+        let screenWidth = window.innerWidth;
+
+
+        // Update the variable value in the onResize() function.
+        function onResize() {
+          screenWidth = window.innerWidth;
+
+        // Check if the screen width is greater than 768px.
+        if (window.innerWidth > 768) {
+            // Do something for screens larger than 768px.
+            radius = 250;
+          }else if (window.innerWidth > 1200) {
+            // Do something for screens larger than 992px.
+            radius = 350;
+          }else{
+            radius = 150;
+          }
+
+          console.log(radius)
+          // Do something with the new screen width.
+          // For example, you could change the size of an element or the layout of your page.
+        }
+        
+        window.addEventListener('resize', onResize);
 
         for (let i = 0; i < itemCount; i++) {
             const item = document.createElement("div");
@@ -219,6 +244,8 @@
             const image = document.createElement("img");
             image.src = `./images/cup${i + 1}.png`;
             image.alt = `Item ${i + 1}`;
+
+            
 
             item.appendChild(image);
             listOfImages.appendChild(item);
@@ -249,8 +276,8 @@
             const item = document.createElement("div");
             item.className = "swiper-slide w-14 h-14 flex flex-col items-center justify-center cursor-pointer p-2";
             item.style.position = "absolute";
-            item.style.height = "50px";
-            item.style.width = "50px";
+            item.style.height = "80px";
+            item.style.width = "57px";
             item.style.backgroundColor =`#${colors[i]}`;
             item.style.left = `calc(50% + ${x}px)`;
             item.style.top = `calc(50% + ${y}px)`;
@@ -288,6 +315,7 @@
                 swiper: swiper,
             },
         });
+
     </script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.js"></script>

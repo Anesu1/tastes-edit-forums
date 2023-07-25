@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        custom: ['Montserrat'],
+                    },
+                    screens: {
+                        sm: '568px',
+                    }
+                },
+                fontWeight: {
+                    bold: 700,
+                    medium: 500,
+                    semibold: 600,
+                },
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+
+
+
+    <section class="banner p-[10%] relative">
+        <div class="swiper mySwiper2 rounded-[50%] border ">
+            <div class="swiper-wrapper images-list items-center ">
+
+
+
+            </div>
+
+        </div>
+        <div thumbsSlider="" class="swiper mySwiper absolute w-full h-full top-0 left-0">
+            <div class="swiper-wrapper thumbs-list py-[10%]">
+
+            </div>
+        </div>
+
+    </section>
+
+
+    <section class="p-[5%]">
+        <div class="top-div flex justify-between mb-3">
+            <h2 class="text-black font-custom text-2xl font-bold flex mb-3">
+                <img src="./images/flame.png" class="object-contain mr-[5px] w-[20px]" alt="">
+                <span>Top Trending</span>
+            </h2>
+
+            <button id="dropdownRightEndButton" data-dropdown-toggle="dropdownRightEnd"
+                data-dropdown-placement="bottom-end"
+                class="text-black  bg-[#F6F6F6] focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded text-sm px-5 py-2.5 text-center inline-flex items-center md:flex md:justify-between  md:w-[300px]"
+                type="button">Latest <img src="./images/Vector.svg" class="w-[30px] ml-3" alt=""></button>
+            <!-- Dropdown menu -->
+            <div id="dropdownRightEnd" class="z-20 hidden bg-white divide-y divide-gray-100 rounded shadow w-44 ">
+                <ul class="py-2 text-sm text-gray-700" aria-labelledby="dropdownRightEndButton">
+                    <li>
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-100 ">Dashboard</a>
+                    </li>
+                    <li>
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-100 ">Settings</a>
+                    </li>
+                    <li>
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-100 ">Earnings</a>
+                    </li>
+                    <li>
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-100 ">Sign
+                            out</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="cards flex flex-wrap gap-2 justify-between">
+            <!-- card -->
+
+            <div
+                class="card shadow w-full hover:shadow-lg rounded overflow bg-cover p-[10px] h-[400px] max-h-[400px] flex flex-col justify-between mb-3 sm:m-0 sm:w-[49%]  lg:w-[24%] ">
+                <a href="#">
+                    <h3 class="text-white font-custom text-2xl font-bold">The new Jameson Mait, a must taste for all
+                        Jameson lovers</h3>
+                    <div class="bottom flex items-end justify-between">
+                        <div class="left flex">
+                            <img src="./images/kath.png" class="w-[50px] mr-2 object-contain" alt="">
+                            <div class="details">
+                                <h6 class="text-white font-custom text-sm md:text-xs lg:text-md font-bold">Katherine
+                                    Tornton</h6>
+                                <p class="text-[#9999] font-custom text-sm md:text-xs lg:text-md font-bold">1 Day Ago
+                                </p>
+                            </div>
+                        </div>
+                        <div class="btns flex w-max">
+                            <a href="#" class="mr-2">
+                                <img class="w-full" src="./images/like.svg" alt="">
+                            </a>
+                            <a href="#">
+                                <img class="w-full" src="./images/chat.svg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div
+                class="card card-two w-full shadow hover:shadow-lg rounded overflow bg-cover p-[10px] h-[400px] max-h-[400px] flex flex-col justify-between mb-3 sm:m-0 sm:w-[49%]  lg:w-[24%] ">
+                <a href="#">
+                    <h3 class="text-white font-custom text-2xl font-bold">The new Jameson Mait, a must taste for all
+                        Jameson lovers</h3>
+                    <div class="bottom flex items-end justify-between">
+                        <div class="left flex">
+                            <img src="./images/kath.png" class="w-[50px] mr-2 object-contain" alt="">
+                            <div class="details">
+                                <h6 class="text-white font-custom text-sm md:text-xs lg:text-md font-bold">Tamari
+                                    Tornton</h6>
+                                <p class="text-[#9999] font-custom text-sm md:text-xs lg:text-md font-bold">3 Days Ago
+                                </p>
+                            </div>
+                        </div>
+                        <div class="btns flex w-max">
+                            <a href="#" class="mr-2">
+                                <img class="w-full" src="./images/like.svg" alt="">
+                            </a>
+                            <a href="#">
+                                <img class="w-full" src="./images/chat.svg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div
+                class="card card-three shadow w-full hover:shadow-lg rounded overflow bg-cover p-[10px] h-[400px] max-h-[400px] flex flex-col justify-between mb-3 sm:m-0 sm:w-[49%]  lg:w-[24%] ">
+                <a href="#">
+                    <h3 class="text-white font-custom text-2xl font-bold">The new Jameson Mait, a must taste for all
+                        Jameson lovers</h3>
+                    <div class="bottom flex items-end justify-between">
+                        <div class="left flex">
+                            <img src="./images/kath.png" class="w-[50px] mr-2 object-contain" alt="">
+                            <div class="details">
+                                <h6 class="text-white font-custom text-sm md:text-xs lg:text-md font-bold">Katherine
+                                    Tornton</h6>
+                                <p class="text-[#9999] font-custom text-sm md:text-xs lg:text-md font-bold">1 Day Ago
+                                </p>
+                            </div>
+                        </div>
+                        <div class="btns flex w-max">
+                            <a href="#" class="mr-2">
+                                <img class="w-full" src="./images/like.svg" alt="">
+                            </a>
+                            <a href="#">
+                                <img class="w-full" src="./images/chat.svg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div
+                class="card card-four w-full shadow hover:shadow-lg rounded overflow bg-cover p-[10px] h-[400px] max-h-[400px] flex flex-col justify-between mb-3 sm:m-0 sm:w-[49%]  lg:w-[24%] ">
+                <a href="#">
+                    <h3 class="text-white font-custom text-2xl font-bold">The new Jameson Mait, a must taste for all
+                        Jameson lovers</h3>
+                    <div class="bottom flex items-end justify-between">
+                        <div class="left flex">
+                            <img src="./images/kath.png" class="w-[50px] mr-2 object-contain" alt="">
+                            <div class="details">
+                                <h6 class="text-white font-custom text-sm md:text-xs lg:text-md font-bold">Tamari
+                                    Tornton</h6>
+                                <p class="text-[#9999] font-custom text-sm md:text-xs lg:text-md font-bold">3 Days Ago
+                                </p>
+                            </div>
+                        </div>
+                        <div class="btns flex w-max">
+                            <a href="#" class="mr-2">
+                                <img class="w-full" src="./images/like.svg" alt="">
+                            </a>
+                            <a href="#">
+                                <img class="w-full" src="./images/chat.svg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+
+
+
+
+        </div>
+    </section>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+
+        const thumbsList = document.querySelector(".thumbs-list");
+        const listOfImages = document.querySelector(".images-list");
+        const itemCount = 14;
+        const radius = 150;
+
+        for (let i = 0; i < itemCount; i++) {
+            const item = document.createElement("div");
+            item.className = "swiper-slide";
+
+            const image = document.createElement("img");
+            image.src = `./images/cup${i + 1}.png`;
+            image.alt = `Item ${i + 1}`;
+
+            item.appendChild(image);
+            listOfImages.appendChild(item);
+        }
+
+        for (let i = 0; i < itemCount; i++) {
+            const angle = (360 / itemCount) * i;
+            const x = radius * Math.cos(angle * (Math.PI / 180));
+            const y = radius * Math.sin(angle * (Math.PI / 180));
+
+            const item = document.createElement("div");
+            item.className = "swiper-slide w-14 h-14 bg-black flex flex-col items-center justify-center cursor-pointer";
+            item.style.position = "absolute";
+            item.style.height = "50px";
+            item.style.width = "50px";
+            item.style.backgroundColor = "#000";
+            item.style.left = `calc(50% + ${x}px)`;
+            item.style.top = `calc(50% + ${y}px)`;
+            item.style.transform = "translate(-50%, -50%)";
+
+            const title = document.createElement("h5");
+            title.className = "text-white mt-[5px] font-bold text-[15px]";
+            title.innerText = `Item ${i + 1}`;
+
+            const image = document.createElement("img");
+            image.className = "w-[80%]"
+            image.src = `./images/cup${i + 1}.png`;
+            image.alt = `Item ${i + 1}`;
+
+            const inner = document.createElement("div");
+            inner.className = "bg-red w-[20px] flex flex-col"
+            inner.appendChild(image);
+            inner.appendChild(title);
+
+            item.appendChild(inner)
+            
+            thumbsList.appendChild(item);
+        }
+        var swiper = new Swiper(".mySwiper", {
+            spaceBetween: 10,
+            slidesPerView: 4,
+            freeMode: true,
+            watchSlidesProgress: true,
+            
+        });
+        var swiper2 = new Swiper(".mySwiper2", {
+            spaceBetween: 10,
+            
+            thumbs: {
+                swiper: swiper,
+            },
+        });
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.js"></script>
+</body>
+
+</html>

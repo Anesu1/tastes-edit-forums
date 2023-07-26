@@ -218,7 +218,7 @@
 
 
                             <button class="bg-[#97001C] flex items-center rounded px-5 py-3 font-bold z-10 h-[40px]"
-                                data-modal-target="defaultModal" data-modal-toggle="defaultModal">
+                                >
                                 <svg xmlns="http://www.w3.org/2000/svg" width="27" height="28" viewBox="0 0 27 28"
                                     fill="none">
                                     <path
@@ -227,44 +227,7 @@
                                 </svg>
                                 <span class="ml-3">Share</span>
                             </button>
-                            <button data-modal-target="defaultModal" data-modal-toggle="defaultModal" class="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">
-                                Toggle modal
-                              </button>
-                              
-                              <!-- Main modal -->
-                              <div id="defaultModal" tabindex="-1" aria-hidden="true" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
-                                  <div class="relative w-full max-w-2xl max-h-full">
-                                      <!-- Modal content -->
-                                      <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
-                                          <!-- Modal header -->
-                                          <div class="flex items-start justify-between p-4 border-b rounded-t dark:border-gray-600">
-                                              <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
-                                                  Terms of Service
-                                              </h3>
-                                              <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="defaultModal">
-                                                  <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
-                                                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
-                                                  </svg>
-                                                  <span class="sr-only">Close modal</span>
-                                              </button>
-                                          </div>
-                                          <!-- Modal body -->
-                                          <div class="p-6 space-y-6">
-                                              <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-                                                  With less than a month to go before the European Union enacts new consumer privacy laws for its citizens, companies around the world are updating their terms of service agreements to comply.
-                                              </p>
-                                              <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-                                                  The European Union’s General Data Protection Regulation (G.D.P.R.) goes into effect on May 25 and is meant to ensure a common set of data rights in the European Union. It requires organizations to notify users as soon as possible of high-risk data breaches that could personally affect them.
-                                              </p>
-                                          </div>
-                                          <!-- Modal footer -->
-                                          <div class="flex items-center p-6 space-x-2 border-t border-gray-200 rounded-b dark:border-gray-600">
-                                              <button data-modal-hide="defaultModal" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">I accept</button>
-                                              <button data-modal-hide="defaultModal" type="button" class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600">Decline</button>
-                                          </div>
-                                      </div>
-                                  </div>
-                              </div>
+                           
                         </div>
                     </div>
 
@@ -281,11 +244,124 @@
                     <h2 class="font-bolder text-2xl lg:text-[40px]">The new Jameson Malt, a must taste for all Jameson
                         lovers.</h2>
                     <div class="flex justify-between gap-2 mt-5">
-                        <button class="bg-[#DA0000] text-white rounded text-xs px-5 py-1 w-1/4 h-[35px]">Gin</button>
+                        <button class="bg-[#DA0000] text-white rounded text-xs px-5 py-1 w-1/4 h-[35px]"
+                        data-modal-target="defaultModal" data-modal-toggle="defaultModal"
+                        >Gin</button>
                         <button class="bg-[#918000] text-white rounded text-xs px-5 py-1 w-1/4 h-[35px]">tags</button>
                         <button class="bg-[#918000] text-white rounded text-xs px-5 py-1 w-1/4 h-[35px]">tags</button>
                         <button class="bg-[#918000] text-white rounded text-xs px-5 py-1 w-1/4 h-[35px]">tags</button>
 
+                        <!-- Modal  -->
+                    <div id="defaultModal" tabindex="-1" aria-hidden="true"
+                    class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
+                    <div class="relative w-full max-w-[900px] max-h-full">
+                        <!-- Modal content -->
+                        <div class="relative bg-white shadow">
+                            <!-- Modal header -->
+                            <div
+                                class="flex items-start justify-between p-4">
+                                <h3 class="text-xl font-semibold text-gray-900">
+                                    Post A Reply
+                                </h3>
+                                <button type="button"
+                                    class="text-gray-400 bg-transparent rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center"
+                                    data-modal-hide="defaultModal">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
+                                        <rect y="3.64941" width="4.59765" height="42.922" rx="2.29882" transform="rotate(-45 0 3.64941)" fill="#890620"/>
+                                        <rect x="30.3506" width="4.59765" height="42.922" rx="2.29882" transform="rotate(45 30.3506 0)" fill="#890620"/>
+                                        </svg>
+                                    <span class="sr-only">Close modal</span>
+                                </button>
+                            </div>
+                            <!-- Modal body -->
+                            <div class="p-2 space-y-2">
+
+
+                                
+                                <div class="textarea relative">
+                                    <textarea id="message" rows="10"
+                                        class="block p-2.5 w-full text-sm text-black font-medium bg-white rounded border border-gray-200 placeholder-black"
+                                        placeholder="Reply here....."
+                                        
+                                       ></textarea>
+                                </div>
+
+
+                            </div>
+                            <!-- Modal footer -->
+                            <div
+                                class="flex items-center justify-between p-2.5 space-x-2 rounded">
+                                <div class="left flex flex-wrap gap-2">
+                                    <button id="boldBtn" class="flex items-center justify-center w-[40px] bg-[#F4F4F4] rounded-[50%] h-[40px] md:rounded md:px-3 md:w-max"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                            viewBox="0 0 20 20" fill="none">
+                                            <path
+                                                d="M8.8998 1C11.2998 1 13.0998 1.3 14.2998 2C15.5998 2.7 16.1998 3.9 16.1998 5.6C16.1998 6.6 15.8998 7.5 15.4998 8.2C15.2731 8.54193 14.9786 8.83372 14.6346 9.05733C14.2906 9.28093 13.9043 9.43159 13.4998 9.5C14.0715 9.63353 14.6138 9.87079 15.0998 10.2C15.4998 10.5 15.8998 11 16.1998 11.5C16.5128 12.2244 16.6498 13.0125 16.5998 13.8C16.6352 14.5225 16.4996 15.2431 16.2043 15.9033C15.9089 16.5636 15.462 17.1449 14.8998 17.6C13.4763 18.6167 11.7456 19.1112 9.9998 19H3.2998V1H8.8998ZM9.2998 8.1C10.3998 8.1 11.1998 8 11.5998 7.6C12.0998 7.3 12.2998 6.7 12.2998 6.1C12.2998 5.4 11.9998 4.9 11.4998 4.6C10.9998 4.3 10.1998 4.1 9.0998 4.1H7.0998V8.1H9.2998ZM7.0998 11.1V16H9.5998C10.6998 16 11.5998 15.7 11.9998 15.3C12.4998 14.8 12.6998 14.3 12.6998 13.5C12.7117 13.1977 12.6549 12.8967 12.5337 12.6196C12.4124 12.3424 12.2299 12.0964 11.9998 11.9C11.4998 11.5 10.6998 11.3 9.4998 11.3H6.9998L7.0998 11.1Z"
+                                                fill="#890620" />
+                                        </svg>
+                                        <span class="hidden md:block text-black font-medium text-xs ml-2">Bold</span>
+                                    </button>
+                                    <button onclick="applyHeading('h2')" class="flex items-center justify-center w-[40px] bg-[#F4F4F4] rounded-[50%] h-[40px] md:rounded md:px-3 md:w-max">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23"
+                                            viewBox="0 0 23 23" fill="none">
+                                            <g clip-path="url(#clip0_2027_11958)">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M5.6582 4.2168C5.81316 4.21663 5.96453 4.26343 6.09236 4.35103C6.22019 4.43862 6.31848 4.56289 6.37427 4.70746L11.2963 17.4648C11.3695 17.6545 11.3643 17.8655 11.2819 18.0514C11.1995 18.2373 11.0467 18.3829 10.857 18.4561C10.6673 18.5293 10.4562 18.5241 10.2703 18.4418C10.0844 18.3594 9.93887 18.2065 9.86567 18.0168L8.25413 13.8385H3.0822L1.48293 18.0168C1.44689 18.1108 1.39268 18.1968 1.32339 18.2699C1.25411 18.343 1.1711 18.4017 1.07912 18.4427C0.987145 18.4837 0.887989 18.5062 0.787319 18.5089C0.686648 18.5116 0.586435 18.4944 0.492399 18.4584C0.398364 18.4224 0.312349 18.3681 0.239265 18.2989C0.166181 18.2296 0.10746 18.1466 0.0664532 18.0546C0.0254468 17.9626 0.0029587 17.8635 0.000272807 17.7628C-0.00241308 17.6621 0.0147558 17.5619 0.0507993 17.4679L4.94213 4.71053C4.99767 4.56567 5.09585 4.44107 5.2237 4.35319C5.35155 4.26531 5.50306 4.21675 5.6582 4.2168ZM5.66127 7.1194L7.7512 12.5351H3.5836L5.66127 7.1194ZM16.712 7.9842C14.1973 7.9842 12.2807 10.252 12.2807 13.2021C12.2807 16.3056 14.3507 18.4185 16.712 18.4185C17.362 18.4188 18.0051 18.284 18.6003 18.0227C19.1955 17.7614 19.7299 17.3793 20.1697 16.9005V17.6795C20.1697 17.8625 20.2424 18.038 20.3718 18.1674C20.5012 18.2968 20.6767 18.3695 20.8597 18.3695C21.0427 18.3695 21.2182 18.2968 21.3476 18.1674C21.477 18.038 21.5497 17.8625 21.5497 17.6795V8.7708C21.5497 8.5878 21.477 8.41229 21.3476 8.28289C21.2182 8.15349 21.0427 8.0808 20.8597 8.0808C20.6767 8.0808 20.5012 8.15349 20.3718 8.28289C20.2424 8.41229 20.1697 8.5878 20.1697 8.7708V9.54206C19.7367 9.0525 19.2047 8.66046 18.6089 8.3919C18.0131 8.12333 17.3655 7.98437 16.712 7.9842ZM20.1697 15.0237V11.1965C19.5717 10.091 18.3097 9.28906 17.0003 9.28906C15.5007 9.28906 13.8539 10.6813 13.8539 13.2021C13.8539 15.5681 15.3473 17.1152 17.0003 17.1152C18.3542 17.1152 19.5839 16.0925 20.1697 15.0237Z"
+                                                    fill="#890620" />
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_2027_11958">
+                                                    <rect width="23" height="23" fill="white" />
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                        <span class="hidden md:block text-black font-medium text-xs ml-2">Heading</span>
+                                    </button>
+                                    <label for="attach" class="flex items-center justify-center w-[40px] bg-[#F4F4F4] rounded-[50%] h-[40px] md:rounded md:px-3 md:w-max">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26"
+                                            viewBox="0 0 26 26" fill="none">
+                                            <path opacity="0.2"
+                                                d="M22.75 5.6875V18.0842L18.7159 14.0502C18.5636 13.8979 18.357 13.8124 18.1416 13.8124C17.9262 13.8124 17.7196 13.8979 17.5673 14.0502L14.9612 16.6562L9.91859 11.6127C9.84313 11.5371 9.75352 11.4772 9.65489 11.4363C9.55625 11.3954 9.45053 11.3744 9.34375 11.3744C9.23697 11.3744 9.13125 11.3954 9.03261 11.4363C8.93398 11.4772 8.84437 11.5371 8.76891 11.6127L3.25 17.1326V5.6875C3.25 5.47201 3.3356 5.26535 3.48798 5.11298C3.64035 4.9606 3.84701 4.875 4.0625 4.875H21.9375C22.153 4.875 22.3597 4.9606 22.512 5.11298C22.6644 5.26535 22.75 5.47201 22.75 5.6875Z"
+                                                fill="#890620" />
+                                            <path
+                                                d="M21.9375 4.0625H4.0625C3.63152 4.0625 3.2182 4.2337 2.91345 4.53845C2.6087 4.8432 2.4375 5.25652 2.4375 5.6875V20.3125C2.4375 20.7435 2.6087 21.1568 2.91345 21.4615C3.2182 21.7663 3.63152 21.9375 4.0625 21.9375H21.9375C22.3685 21.9375 22.7818 21.7663 23.0865 21.4615C23.3913 21.1568 23.5625 20.7435 23.5625 20.3125V5.6875C23.5625 5.25652 23.3913 4.8432 23.0865 4.53845C22.7818 4.2337 22.3685 4.0625 21.9375 4.0625ZM21.9375 5.6875V16.123L19.2898 13.4763C19.1389 13.3254 18.9597 13.2057 18.7625 13.124C18.5654 13.0423 18.354 13.0002 18.1406 13.0002C17.9272 13.0002 17.7158 13.0423 17.5186 13.124C17.3215 13.2057 17.1423 13.3254 16.9914 13.4763L14.9602 15.5076L10.4914 11.0388C10.1867 10.7343 9.77353 10.5633 9.34273 10.5633C8.91194 10.5633 8.49878 10.7343 8.19406 11.0388L4.0625 15.1704V5.6875H21.9375ZM4.0625 17.4688L9.34375 12.1875L17.4688 20.3125H4.0625V17.4688ZM21.9375 20.3125H19.7671L16.1109 16.6562L18.1421 14.625L21.9375 18.4214V20.3125ZM14.625 10.1562C14.625 9.9152 14.6965 9.67957 14.8304 9.47915C14.9643 9.27873 15.1547 9.12252 15.3774 9.03027C15.6001 8.93803 15.8451 8.91389 16.0815 8.96092C16.3179 9.00794 16.5351 9.12402 16.7055 9.29446C16.876 9.46491 16.9921 9.68207 17.0391 9.91848C17.0861 10.1549 17.062 10.3999 16.9697 10.6226C16.8775 10.8453 16.7213 11.0357 16.5209 11.1696C16.3204 11.3035 16.0848 11.375 15.8438 11.375C15.5205 11.375 15.2105 11.2466 14.982 11.018C14.7534 10.7895 14.625 10.4795 14.625 10.1562Z"
+                                                fill="#890620" />
+                                        </svg>
+                                        <span class="hidden md:block text-black font-medium text-xs ml-2">Attach</span>
+                                        <input type="file" id="attach" multiple class="hidden">
+                                    </label>
+                                    <button id="undoBtn" class="flex items-center justify-center w-[40px] bg-[#F4F4F4] rounded-[50%] h-[40px] md:rounded md:px-3 md:w-max">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26"
+                                            viewBox="0 0 26 26" fill="none">
+                                            <path
+                                                d="M10.8332 8.66667H5.4165V3.25M5.73175 17.7201C6.74126 19.2746 8.22253 20.4644 9.95811 21.115C11.6937 21.7656 13.5921 21.8427 15.3747 21.3348C17.1573 20.827 18.7301 19.7611 19.8622 18.2935C20.9944 16.826 21.6262 15.0341 21.665 13.181C21.7037 11.3279 21.1473 9.51118 20.0775 7.99757C19.0077 6.48397 17.4808 5.35321 15.721 4.77132C13.9612 4.18942 12.0612 4.18704 10.3 4.76452C8.53874 5.342 7.00902 6.46892 5.93542 7.97983"
+                                                stroke="#890620" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                        <span class="hidden md:block text-black font-medium text-xs ml-2">Undo</span>
+                                    </button>
+                                    <button id="redoBtn" class="flex items-center justify-center w-[40px] bg-[#F4F4F4] rounded-[50%] h-[40px] md:rounded md:px-3 md:w-max">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26"
+                                            viewBox="0 0 26 26" fill="none">
+                                            <path
+                                                d="M15.1668 8.66667H20.5835V3.25M20.2682 17.7201C19.2587 19.2746 17.7775 20.4644 16.0419 21.115C14.3063 21.7656 12.4079 21.8427 10.6253 21.3348C8.84272 20.827 7.26991 19.7611 6.13776 18.2935C5.00562 16.826 4.37379 15.0341 4.33504 13.181C4.29629 11.3279 4.85266 9.51118 5.92247 7.99757C6.99228 6.48397 8.51917 5.35321 10.279 4.77132C12.0388 4.18942 13.9388 4.18704 15.7 4.76452C17.4613 5.342 18.991 6.46892 20.0646 7.97983"
+                                                stroke="#890620" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                        <span class="hidden md:block text-black font-medium text-xs ml-2">Redo</span>
+                                    </button>
+                                </div>
+
+
+
+                                <button data-modal-hide="defaultModal" type="button"
+                                    class="text-black bg-[#F8BD14] hover:bg-gray-100 focus:ring-4 focus:outline-none 
+                                    focus:ring-blue-300 rounded  text-sm font-medium 
+                                    px-2.5 py-2.5 hover:text-gray-900 focus:z-10 w-[200px]">Start
+                                    Discussion</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                     </div>
                     <a href="#" class="text-md underline mt-10 font-medium block lg:text-2xl">Ciroc Coconut Vodka</a>
                     <p class="text-xs mt-3 font-medium lg:text-md">Ciroc Coconut Vodka is masterfully infused with
@@ -511,7 +587,88 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.js"></script>
 
     <script>
-
+        document.addEventListener("DOMContentLoaded", function () {
+            const editor = document.getElementById("message");
+            const undoBtn = document.getElementById("undoBtn");
+            const redoBtn = document.getElementById("redoBtn");
+            const boldBtn = document.getElementById("boldBtn");
+      
+            let editorState = {
+              value: "",
+              position: 0,
+              stack: []
+            };
+      
+            // Function to update the editor's content and position
+            function updateEditor(value, position) {
+              editor.value = value;
+              editor.selectionStart = editor.selectionEnd = position;
+            }
+      
+            // Function to handle the undo action
+            function undo() {
+              if (editorState.stack.length > 0) {
+                const prevState = editorState.stack.pop();
+                editorState.value = prevState.value;
+                editorState.position = prevState.position;
+                updateEditor(prevState.value, prevState.position);
+              }
+            }
+      
+            // Function to handle the redo action
+            function redo() {
+              if (editorState.stack.length > editorState.position) {
+                const nextState = editorState.stack[editorState.position];
+                editorState.value = nextState.value;
+                editorState.position++;
+                updateEditor(nextState.value, nextState.position);
+              }
+            }
+      
+            // Function to handle the bold action
+            function bold() {
+              const start = editor.selectionStart;
+              const end = editor.selectionEnd;
+              const selectedText = editor.value.substring(start, end);
+              const newText = `<b>${selectedText}</b>`;
+              const newValue =
+                editor.value.substring(0, start) +
+                newText +
+                editor.value.substring(end);
+              const newPosition = start + newText.length;
+      
+              editorState.stack.push({
+                value: editorState.value,
+                position: editorState.position
+              });
+              editorState.value = newValue;
+              editorState.position = editorState.stack.length;
+              updateEditor(newValue, newPosition);
+            }
+      
+            // Event listeners for buttons
+            undoBtn.addEventListener("click", undo);
+            redoBtn.addEventListener("click", redo);
+            boldBtn.addEventListener("click", bold);
+          });
+async function openCamera() {
+    try {
+      const constraints = { video: true };
+      const stream = await navigator.mediaDevices.getUserMedia(constraints);
+      const videoElement = document.getElementById('cameraFeed');
+      
+      if ('srcObject' in videoElement) {
+        videoElement.srcObject = stream;
+      } else {
+        videoElement.src = window.URL.createObjectURL(stream);
+      }
+    } catch (err) {
+      console.error('Error accessing the camera:', err);
+    }
+  }
+  function applyHeading(headingTag) {
+    document.execCommand('formatBlock', false, headingTag);
+  }
     </script>
 </body>
 

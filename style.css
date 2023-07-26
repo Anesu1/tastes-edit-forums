@@ -122,6 +122,9 @@
     
 
 }
+.banner-forums-edit .mySwiper2{
+  background:transparent !important;
+}
 .mySwiper .swiper-slide-thumb-active img{
     width:100%;
 }
@@ -139,11 +142,18 @@
   display:flex;
   align-items:center;
   justify-content:center;
+  text-align:center;
+}
+.swiper-free-mode>.swiper-wrapper{
+  transform:translateY(-10%) !important;
+}
+.mySwiper2 .swiper-free-mode>.swiper-wrapper .swiper-slide{
+  transform:translateY(10%) !important;
 }
 @media(min-width:768px){
   [thumbsslider] .swiper-slide{
-    height:80px !important;
-    width:80px !important;
+    height:70px !important;
+    width:70px !important;
     
   }
 }
@@ -168,6 +178,18 @@
 .mySwiper2 .swiper-wrapper{
   max-width:300px !important;
 }
+.mySwiper2 .swiper-wrapper .swiper-slide{
+  height:60vh;
+}
+.mySwiper2 .swiper-wrapper .swiper-slide{
+  height:60vh;
+}
+.mySwiper2 .swiper-wrapper .swiper-slide .items-of-selected{
+  height:80px;
+  width:130px;
+  border-radius:10px;
+}
+
 @media(min-width:22768px){
   .cards{
     display:flex;

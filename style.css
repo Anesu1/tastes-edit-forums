@@ -27,6 +27,7 @@
     .banner-forums-edit{
       background:url("./images/bg.png");
       background-size:contain;
+      background-repeat:no-repeat;
     }
 
 
@@ -180,14 +181,27 @@
 }
 .mySwiper2 .swiper-wrapper .swiper-slide{
   height:60vh;
+  background:transparent !important;
 }
-.mySwiper2 .swiper-wrapper .swiper-slide{
-  height:60vh;
+@media(min-width:768px){
+  .mySwiper2 .swiper-wrapper .swiper-slide{
+  height:760px;
 }
+}
+
 .mySwiper2 .swiper-wrapper .swiper-slide .items-of-selected{
-  height:80px;
-  width:130px;
+  height:130px;
+  width:150px;
   border-radius:10px;
+  text-align:left !important;
+}
+@media(min-width:768px){
+  .mySwiper2 .swiper-wrapper .swiper-slide .items-of-selected{
+    height:200px;
+    width:200px;
+    border-radius:10px;
+    text-align:left !important;
+  }
 }
 
 @media(min-width:22768px){

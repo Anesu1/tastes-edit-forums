@@ -290,15 +290,15 @@ window.addEventListener("resize", updateRadius);
             item.className = "swiper-slide";
 
             const title = document.createElement("h4");
-            title.className = "items-of-selected text-white mt-[5px] font-bold text-[10px] w-max ";
+            title.className = " text-white mt-[5px] font-bold text-[10px] w-max pl-4 text-lg";
             title.innerText = `Item ${i + 1}`;
 
             const info = document.createElement("p");
-            info.className = "items-of-selected text-white mt-[5px] font-bold text-[10px] w-max ";
+            info.className = "text-white font-bold text-[10px] w-max pl-4 pt-2 pb-3";
             info.innerText = `Item ${i + 1} Information`;
 
             const label = document.createElement("label");
-            label.className = "items-of-selected text-white text-center mt-[5px] font-bold text-[10px] w-max ";
+            label.className = " text-white text-center mt-[5px] font-bold text-[10px] w-max absolute right-2 top-2 py-1 px-3 rounded md:text-lg md:px-5";
             label.innerText = `Spirit ${i + 1}`;
             label.style.backgroundColor = "rgba(0, 0, 0, 0.21)";
 
@@ -310,10 +310,13 @@ window.addEventListener("resize", updateRadius);
             image.alt = `Item ${i + 1}`;
 
             const inner = document.createElement("div");
-            inner.className = "bg-red flex flex-col justify-start items-start rounded"
+            inner.className = "items-of-selected bg-red flex flex-col justify-start items-start rounded relative"
             inner.style.backgroundColor = `#${colors[i]}`;
             inner.appendChild(image);
             inner.appendChild(title);
+            inner.appendChild(info);
+            inner.appendChild(label)
+            
 
             
 

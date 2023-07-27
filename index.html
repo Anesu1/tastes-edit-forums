@@ -7,7 +7,11 @@
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" /> -->
+    <link
+  rel="stylesheet"
+  href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+/>
     <script>
         tailwind.config = {
             theme: {
@@ -215,7 +219,8 @@
     </section>
 
     <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script> -->
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 
     <!-- Initialize Swiper -->
     <script>
@@ -241,6 +246,83 @@
         "908C02",
         "97011C",
     ]
+
+    for (let i = 0; i < itemCount; i++) {
+        const item = document.createElement("div");
+        item.className = "swiper-slide";
+
+        const title = document.createElement("h4");
+        title.className = " text-white mt-[5px] font-bold text-[10px] w-max pl-4 text-lg";
+        title.innerText = `Item ${i + 1}`;
+
+        const info = document.createElement("p");
+        info.className = "text-white font-bold text-[10px] w-max pl-4 pt-2 pb-3";
+        info.innerText = `Item ${i + 1} Information`;
+
+        const label = document.createElement("label");
+        label.className = " text-white text-center mt-[5px] font-bold text-[10px] w-max absolute right-2 top-2 py-1 px-3 rounded md:text-lg md:px-5";
+        label.innerText = `Spirit ${i + 1}`;
+        label.style.backgroundColor = "rgba(0, 0, 0, 0.21)";
+
+
+
+        const image = document.createElement("img");
+        image.src = `./images/cup${i + 1}.png`;
+        image.classList = 'pt-4 pl-4'
+        image.alt = `Item ${i + 1}`;
+
+        const inner = document.createElement("div");
+        inner.className = "items-of-selected bg-red flex flex-col justify-start items-start rounded relative"
+        inner.style.backgroundColor = `#${colors[i]}`;
+        inner.appendChild(image);
+        inner.appendChild(title);
+        inner.appendChild(info);
+        inner.appendChild(label)
+        
+
+        
+
+        item.appendChild(inner);
+        listOfImages.appendChild(item);
+    }
+
+   
+
+    for (let i = 0; i < itemCount; i++) {
+        const angle = (360 / itemCount) * i;
+        const x = radius * Math.cos(angle * (Math.PI / 180));
+        const y = radius * Math.sin(angle * (Math.PI / 180));
+
+        const item = document.createElement("div");
+        item.className = "swiper-slide w-14 h-14 flex flex-col items-center justify-center cursor-pointer p-2 rounded";
+        item.style.position = "absolute";
+        item.style.height = "80px";
+        item.style.width = "57px";
+        item.style.backgroundColor =`#${colors[i]}`;
+        item.style.left = `calc(50% + ${x}px)`;
+        item.style.top = `calc(50% + ${y}px)`;
+        item.style.transform = "translate(-50%, -50%)";
+
+        const title = document.createElement("h5");
+        title.className = "text-white text-center mt-[5px] font-bold text-[10px] w-max ";
+        title.innerText = `Item ${i + 1}`;
+
+        const image = document.createElement("img");
+        image.className = "w-full"
+        image.src = `./images/cup${i + 1}.png`;
+        image.alt = `Item ${i + 1}`;
+
+        const inner = document.createElement("div");
+        inner.className = "bg-red flex flex-col justify-center items-center text-center"
+       
+        inner.appendChild(image);
+        inner.appendChild(title);
+
+        item.appendChild(inner)
+        
+        thumbsList.appendChild(item);
+    }
+   
 
         function updateRadius() {
             if (window.innerWidth > 992) {
@@ -298,81 +380,7 @@ window.addEventListener("resize", updateRadius);
 
         
 
-        for (let i = 0; i < itemCount; i++) {
-            const item = document.createElement("div");
-            item.className = "swiper-slide";
-
-            const title = document.createElement("h4");
-            title.className = " text-white mt-[5px] font-bold text-[10px] w-max pl-4 text-lg";
-            title.innerText = `Item ${i + 1}`;
-
-            const info = document.createElement("p");
-            info.className = "text-white font-bold text-[10px] w-max pl-4 pt-2 pb-3";
-            info.innerText = `Item ${i + 1} Information`;
-
-            const label = document.createElement("label");
-            label.className = " text-white text-center mt-[5px] font-bold text-[10px] w-max absolute right-2 top-2 py-1 px-3 rounded md:text-lg md:px-5";
-            label.innerText = `Spirit ${i + 1}`;
-            label.style.backgroundColor = "rgba(0, 0, 0, 0.21)";
-
-
-
-            const image = document.createElement("img");
-            image.src = `./images/cup${i + 1}.png`;
-            image.classList = 'pt-4 pl-4'
-            image.alt = `Item ${i + 1}`;
-
-            const inner = document.createElement("div");
-            inner.className = "items-of-selected bg-red flex flex-col justify-start items-start rounded relative"
-            inner.style.backgroundColor = `#${colors[i]}`;
-            inner.appendChild(image);
-            inner.appendChild(title);
-            inner.appendChild(info);
-            inner.appendChild(label)
-            
-
-            
-
-            item.appendChild(inner);
-            listOfImages.appendChild(item);
-        }
-
-       
-
-        for (let i = 0; i < itemCount; i++) {
-            const angle = (360 / itemCount) * i;
-            const x = radius * Math.cos(angle * (Math.PI / 180));
-            const y = radius * Math.sin(angle * (Math.PI / 180));
-
-            const item = document.createElement("div");
-            item.className = "swiper-slide w-14 h-14 flex flex-col items-center justify-center cursor-pointer p-2 rounded";
-            item.style.position = "absolute";
-            item.style.height = "80px";
-            item.style.width = "57px";
-            item.style.backgroundColor =`#${colors[i]}`;
-            item.style.left = `calc(50% + ${x}px)`;
-            item.style.top = `calc(50% + ${y}px)`;
-            item.style.transform = "translate(-50%, -50%)";
-
-            const title = document.createElement("h5");
-            title.className = "text-white text-center mt-[5px] font-bold text-[10px] w-max ";
-            title.innerText = `Item ${i + 1}`;
-
-            const image = document.createElement("img");
-            image.className = "w-full"
-            image.src = `./images/cup${i + 1}.png`;
-            image.alt = `Item ${i + 1}`;
-
-            const inner = document.createElement("div");
-            inner.className = "bg-red flex flex-col justify-center items-center text-center"
-           
-            inner.appendChild(image);
-            inner.appendChild(title);
-
-            item.appendChild(inner)
-            
-            thumbsList.appendChild(item);
-        }
+        
         var swiper = new Swiper(".mySwiper", {
             spaceBetween: 2,
             slidesPerView: 10, 
